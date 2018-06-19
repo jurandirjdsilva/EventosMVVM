@@ -1,21 +1,24 @@
 class User ():
-    def __init__(self,nome,user,pass):
+    def __init__(self,name,email,user,password):
+        self.email = emal
         self.name = name
         self.user = user 
-        self.pass = pass
+        self.password = password   # armazenar em para md5
     def setName(self,name):
         self.name = name
+    def setName(self,emal):
+        self.emal = emal
     def setUser(self,user):
         self.user = user
-    def setSenha(self,pass):
-        self.pass = pass
+    def setSenha(self,password):
+        self.password = password
     def getNome(self):
         return self.nome
     def getUser(self):
         return self.user
     
-    def validate(self,user,pass):
-        if self.user==user and self.pass==pass:
+    def validate(self,user,password):
+        if self.user==user and self.password==password:
             return True
         else : 
             return False
