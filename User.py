@@ -1,19 +1,19 @@
 class User ():
     def __init__(self,name,email,user,password):
-        self.email = emal
+        self.email = email 
         self.name = name
         self.user = user 
         self.password = password   # armazenar em para md5
     def setName(self,name):
         self.name = name
-    def setName(self,emal):
+    def setEmail(self,email):
         self.emal = emal
     def setUser(self,user):
         self.user = user
     def setSenha(self,password):
         self.password = password
     def getNome(self):
-        return self.nome
+        return self.name
     def getUser(self):
         return self.user
     
@@ -24,7 +24,7 @@ class User ():
             return False
         
 def main():
-    user = User("ramon jose","rjsa","rjsa")
+    user = User("ramon jose","ramon.jsa@gmail.com","rjsa","rjsa")
     
     print(user.getNome())
     print(user.getUser())
