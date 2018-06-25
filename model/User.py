@@ -1,34 +1,38 @@
 class User ():
-    def __init__(self,name,email,user,password):
+    def __init__(self,id,name,email):
+        self.id = id
         self.email = email 
         self.name = name
-        self.user = user 
-        self.password = password   # armazenar em para md5
+    def setId(self,id):
+        self.id = id
     def setName(self,name):
         self.name = name
     def setEmail(self,email):
-        self.emal = emal
-    def setUser(self,user):
-        self.user = user
-    def setSenha(self,password):
-        self.password = password
+        self.email = email
+    
     def getNome(self):
         return self.name
-    def getUser(self):
-        return self.user
+    def getEmail(self):
+        return self.email
+    def getId(self):
+        return self.id
     
-    def validate(self,user,password):
-        if self.user==user and self.password==password:
-            return True
-        else : 
-            return False
         
 def main():
-    user = User("ramon jose","ramon.jsa@gmail.com","rjsa","rjsa")
     
+    user = User("42","ramon jose","ramon.jsa@gmail.com")
+    
+    print(user.getId())
     print(user.getNome())
-    print(user.getUser())
-    print(user.validate("rjsa","rjsa"))
-    print(user.validate("rjsa","rjsb"))
+    print(user.getEmail())
+    
+    user.setId("45")
+    user.setName("ramon jose de sousa araujo")
+    user.setName("ramon.jsa@hotmail.com")
+    
+    print(user.getId())
+    print(user.getNome())
+    print(user.getEmail())
+    
 if __name__ == "__main__":
     main()    

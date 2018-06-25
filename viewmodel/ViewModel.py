@@ -1,6 +1,6 @@
 class ViewModel():
     def __init__(self):
-        viewList = []
+        self.viewList = []
 
     def getState(self):
         pass
@@ -10,7 +10,7 @@ class ViewModel():
     def attach(self,view):
         self.viewList.append(view)
     def deatach(self,view):
-        self.viewList.remove()
+        self.viewList.remove(view)
     def notify(self):
         for view in self.viewList :
             view.update()

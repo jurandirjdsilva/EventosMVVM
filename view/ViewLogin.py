@@ -1,7 +1,10 @@
-from View import View
+from view import View
 from getpass import getpass
 from hashlib import md5 
-class ViewLogin(View):
+class ViewLogin(View.View):
+
+
+
     pass
 
         
