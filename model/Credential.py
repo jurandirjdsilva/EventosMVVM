@@ -1,6 +1,7 @@
 class Credential():
-    def __init__(self,user,password):
-        self.user = user 
+    def __init__(self,id,user,password):
+        self.id = id
+        self.user = user
         self.password = password   # armazenar em para md5
     
     def setUser(self,user):
@@ -15,8 +16,11 @@ class Credential():
             return True
         else : 
             return False
+
+credentialList = []
+
 def main():
-    credential = Credential("rjsa","rjsa")
+    credential = Credential("1","rjsa","rjsa")
     print(credential.getUser())
     print(credential.validate("rjsa","rjsa"))
     print(credential.validate("rjsa","rjsb"))
