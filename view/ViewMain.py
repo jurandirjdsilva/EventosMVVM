@@ -1,8 +1,9 @@
 from view import View
-from getpass import getpass
-from hashlib import md5 
-class ViewLogin(View.View):
-    pass
+
+class ViewMain(View.View):
+    def show(self):
+        print("teste main")
+        pass
 
         
 def main():

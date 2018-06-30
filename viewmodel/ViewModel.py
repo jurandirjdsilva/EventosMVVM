@@ -13,5 +13,5 @@ class ViewModel():
         self.viewList.remove(view)
     def notify(self):
         for view in self.viewList :
-            view.update()
+            view.update(self)
     

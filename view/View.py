@@ -10,5 +10,5 @@ class View():
 
     def show(self):
         pass
-    def update(self):
+    def update(self,viewModel):
         pass
