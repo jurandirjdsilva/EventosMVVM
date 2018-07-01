@@ -1,6 +1,8 @@
+from viewmodel import ViewModel
 class View():
     def __init__(self):
         self.viewModelList = []
+        self.viewModel = ViewModel.ViewModel()
         pass
 
     def attach(self,viewModel):
@@ -8,7 +10,10 @@ class View():
     def deatach(self,viewModel):
         self.viewModelList.remove(viewModel)
 
-    def show(self):
+    def update(self):
+        self.state = self.viewModel.getState()
         pass
-    def update(self,viewModel):
+    def show(self):
+        self.update()
+        print(self.state)
         pass

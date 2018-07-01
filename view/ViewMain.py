@@ -2,9 +2,9 @@ from view import View
 
 class ViewMain(View.View):
     def show(self):
-        print("teste main")
+        self.update()
+        print(self.state)
         pass
-
         
 def main():
     user = input("Usuario:")

@@ -11,7 +11,7 @@ class Main():
         self.viewStack[-1].show()
         self.desempilha()
         pass
-    def desempilha():
+    def desempilha(self):
         self.viewStack.pop()
         pass
 
