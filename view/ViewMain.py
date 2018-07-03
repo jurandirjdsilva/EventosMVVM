@@ -1,4 +1,6 @@
 from view import View
+from hashlib import md5
+from getpass import getpass
 
 class ViewMain(View.View):
     def show(self):

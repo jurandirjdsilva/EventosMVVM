@@ -1,38 +1,20 @@
-class User ():
-    def __init__(self,id,name,email):
-        self.id = id
+
+class User:
+    def __init__(self, name, email):
         self.email = email 
         self.name = name
-    def setId(self,id):
-        self.id = id
-    def setName(self,name):
+
+    def set_name(self, name):
         self.name = name
-    def setEmail(self,email):
+
+    def se_email(self, email):
         self.email = email
     
-    def getNome(self):
+    def get_nome(self):
         return self.name
-    def getEmail(self):
+
+    def get_email(self):
         return self.email
-    def getId(self):
+
+    def get_id(self):
         return self.id
-    
-        
-def main():
-    
-    user = User("42","ramon jose","ramon.jsa@gmail.com")
-    
-    print(user.getId())
-    print(user.getNome())
-    print(user.getEmail())
-    
-    user.setId("45")
-    user.setName("ramon jose de sousa araujo")
-    user.setName("ramon.jsa@hotmail.com")
-    
-    print(user.getId())
-    print(user.getNome())
-    print(user.getEmail())
-    
-if __name__ == "__main__":
-    main()    
