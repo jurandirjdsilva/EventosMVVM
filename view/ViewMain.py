@@ -2,7 +2,7 @@ from view import View
 from viewModel import ViewModelMain
 from view import ViewPeriod
 
-#from view import ViewEvent
+from view import ViewEvent
 #from view import ViewCreateEvent
 
 from hashlib import md5
@@ -25,7 +25,9 @@ class ViewMain(View.View):
             "0 para sair , 1 para exibir um evento especifico, 2 para mostrar os eventos de um periodo e 3 para cadastrar eventos")
         if option == '1':
             print ("para exibir um evento especifico")
-            #self.controller.show()
+            id = input("digite a id do evento")
+
+            self.controller.show(ViewEvent.ViewEvent(self.controller, id))
             pass
         elif option == '2':
             print("para mostrar os eventos de um periodo ")
@@ -44,6 +46,7 @@ class ViewMain(View.View):
 
             pass
         elif option == '3':
+            print("cadastrar eventos")
             #self.controller.show()
             print ("cadastrar eventos")
             pass

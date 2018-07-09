@@ -1,6 +1,6 @@
 from view import ViewMain
 from view import ViewPeriod
-from tkinter import *
+
 import datetime
 
 class Controller:
@@ -18,7 +18,7 @@ class Controller:
             view.show()
 
 if __name__ == "__main__":
-    root = Tk()
+
 
     controller = Controller()
     controller.run()
