@@ -1,9 +1,13 @@
-from viewmodel import ViewModel
+from viewModel import ViewModel
+
 class View():
-    def __init__(self):
+    def __init__(self, controller ):
+        self.controller = controller
         self.viewModelList = []
         self.viewModel = ViewModel.ViewModel()
+        self.viewModel.attach(self)
         pass
+
 
     def attach(self,viewModel):
         self.viewModelList.append(viewModel)
@@ -13,6 +17,7 @@ class View():
     def update(self):
         self.state = self.viewModel.getState()
         pass
+
     def show(self):
         self.update()
         print(self.state)
