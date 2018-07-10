@@ -13,3 +13,9 @@ class ViewEvents (View.View):
         self.update()
         print(self.state)
         pass
+
+    def find_Open_events (self):
+        self.viewModel.find_Open_events()
+        pass
+
+    def find_period_events(self,dt_start,dt_end):
