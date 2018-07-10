@@ -19,7 +19,6 @@ class View():
     def update(self):
         self.state = self.viewModel.getState()
 
-        pass
 
     def show(self):
 
