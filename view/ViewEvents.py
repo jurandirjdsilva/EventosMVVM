@@ -11,5 +11,10 @@ class ViewEvents (View.View):
 
     def show(self):
         self.update()
-        print(self.state)
-        pass
+        print('*********************************************')
+        print('*                  Eventos                  *')
+        print('*********************************************')
+
+    def update(self):
+        self.state = self.viewModel.getState()
+        self.events = self.viewModel.
