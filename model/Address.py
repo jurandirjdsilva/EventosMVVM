@@ -40,6 +40,9 @@ class Address:
 		return self.__str__()
 
 	def __str__(self):
+		return self.addres_formated()
+
+	def addres_formated(self):
 		return '{}, {}, {}, {} - {}'.format(self.get_street(), \
 		                                    self.get_number(), \
 		                                    self.get_neighborhood(), \
