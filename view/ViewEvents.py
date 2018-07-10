@@ -20,10 +20,6 @@ class ViewEvents (View.View):
         self.events = self.viewModel.get_events()
 
 
-        self.events = self.viewModel.
-        print(self.state)
-        pass
-
     def find_Open_events (self):
         self.viewModel.find_Open_events()
         pass
