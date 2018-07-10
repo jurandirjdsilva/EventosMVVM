@@ -48,7 +48,6 @@ class ViewMain(View.View):
         elif option == '3':
             print("cadastrar eventos")
             #self.controller.show()
-            print ("cadastrar eventos")
             pass
         elif option == '0':
             print ("sair do programa")

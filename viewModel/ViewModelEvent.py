@@ -17,5 +17,12 @@ class ViewModelEvent(ViewModel.ViewModel):
         pass
     def IsLoggedIn(self):
         #busca no modelo se esta logado
-        pass
-    
+        if 'loged' in globals():
+            print('loged esta entre os globais')
+            global loged
+            if loged == True :
+                return True
+            else:
+                return False
+        else:
+            return False

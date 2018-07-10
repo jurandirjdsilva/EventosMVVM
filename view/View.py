@@ -1,7 +1,9 @@
 from viewModel import ViewModel
 
 class View():
+    state = None
     def __init__(self, controller ):
+
         self.controller = controller
         self.viewModelList = []
         self.viewModel = ViewModel.ViewModel()
@@ -16,9 +18,10 @@ class View():
 
     def update(self):
         self.state = self.viewModel.getState()
+
         pass
 
     def show(self):
-        self.update()
+
         print(self.state)
         pass
