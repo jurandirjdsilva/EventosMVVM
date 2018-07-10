@@ -1,6 +1,6 @@
 from view import View
 from viewModel import ViewModelMain
-from view import ViewPeriod
+from view import ViewEvents
 
 from view import ViewEvent
 #from view import ViewCreateEvent
@@ -14,7 +14,7 @@ import datetime
 
 class ViewMain(View.View):
     def __init__(self, controller = None):
-        self.controller = controller
+        self.root = controller
         self.viewModelList = []
         self.viewModel = ViewModelMain.ViewModelMain()
         self.viewModel.attach(self)
@@ -27,7 +27,7 @@ class ViewMain(View.View):
             print ("para exibir um evento especifico")
             id = input("digite a id do evento")
 
-            self.controller.show(ViewEvent.ViewEvent(self.controller, id))
+            self.root.show(ViewEvent.ViewEvent(self.root, id))
             pass
         elif option == '2':
             print("para mostrar os eventos de um periodo ")
@@ -39,21 +39,21 @@ class ViewMain(View.View):
             dt_end = datetime.date(year, month, day)
 
 
-            self.controller.show(ViewPeriod.ViewPeriod(self.controller,
-                                            dt_start.__str__(),
-                                            dt_end.__str__())
-                      )
+            self.root.show(ViewEvents.ViewEvents(self.root,
+                                                 dt_start.__str__(),
+                                                 dt_end.__str__())
+                           )
 
             pass
         elif option == '3':
             print("cadastrar eventos")
-            #self.controller.show()
+            #self.root.show()
             pass
         elif option == '0':
             print ("sair do programa")
             quit(0)
             pass
-        self.controller.show(self)
+        self.root.show(self)
 
 
 

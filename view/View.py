@@ -4,7 +4,7 @@ class View():
     state = None
     def __init__(self, controller ):
 
-        self.controller = controller
+        self.root = controller
         self.viewModelList = []
         self.viewModel = ViewModel.ViewModel()
         self.viewModel.attach(self)
