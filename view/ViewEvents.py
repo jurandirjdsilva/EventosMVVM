@@ -17,4 +17,4 @@ class ViewEvents (View.View):
 
     def update(self):
         self.state = self.viewModel.getState()
-        self.events = self.viewModel.
+        self.events = self.viewModel.get_events()
