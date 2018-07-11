@@ -78,14 +78,24 @@ class Event:
 	def get_description(self):
 		return self.__description
 
-	def __repr__(self):
-		return self.__str__()
+	# def __repr__(self):
+	# 	return self.__str__()
 
 	def __str__(self):
 		return self.event_formated()
 
 	def event_formated(self):
-		return '({} - {}) {}: {}'.format(self.__start_date.strftime('%d/%m/%y %H:%M'),
-		                                 self.__end_date.strftime('%d/%m/%y %H:%M'),
+		try:
+			start_date = self.__start_date.strftime('%d/%m/%y %H:%M')
+		except Exception:
+			start_date = 'Null'
+
+		try:
+			end_date = self.__end_date.strftime('%d/%m/%y %H:%M')
+		except Exception:
+			end_date = 'Null'
+
+		return '({} - {}) {}: {}'.format(start_date,
+		                                 end_date,
 		                                 self.get_name(),
 		                                 self.get_description())
