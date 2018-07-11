@@ -13,8 +13,8 @@ import datetime
 
 
 class ViewMain(View.View):
-    def __init__(self, controller = None):
-        self.root = controller
+    def __init__(self, root = None):
+        self.root = root
         self.viewModelList = []
         self.viewModel = ViewModelMain.ViewModelMain()
         self.viewModel.attach(self)

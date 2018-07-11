@@ -3,8 +3,8 @@ from viewModel import ViewModelLogin
 from getpass import getpass
 from hashlib import md5 
 class ViewLogin(View.View):
-    def __init__(self, controller ):
-        self.controller = controller
+    def __init__(self, root):
+        self.root = root
         self.viewModelList = []
         self.viewModel = ViewModelLogin.ViewModelLogin()
         self.viewModel.attach(self)

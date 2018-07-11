@@ -2,9 +2,9 @@ from view import View
 from view import ViewLogin
 from viewModel import ViewModelEvent
 class ViewEvent (View.View):
-    def __init__(self, controller, id):
+    def __init__(self, root, id):
         self.id = id
-        self.controller = controller
+        self.root = root
         self.viewModelList = []
         self.viewModel = ViewModelEvent.ViewModelEvent(self.id)
         self.viewModel.attach(self)
@@ -28,7 +28,7 @@ class ViewEvent (View.View):
                 # chamar editevent na viewModelEvent
                 self.viewModel.editEvent(name, dt_start, dt_end, address)
             else :
-                self.controller.show(ViewLogin.ViewLogin(self.controller))
+                self.root.show(ViewLogin.ViewLogin(self.root))
                 pass
 
         elif option == '0':

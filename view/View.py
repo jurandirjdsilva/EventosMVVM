@@ -2,9 +2,9 @@ from viewModel import ViewModel
 
 class View():
     state = None
-    def __init__(self, controller ):
+    def __init__(self, root):
 
-        self.root = controller
+        self.root = root
         self.viewModelList = []
         self.viewModel = ViewModel.ViewModel()
         self.viewModel.attach(self)
