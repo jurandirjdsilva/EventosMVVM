@@ -15,9 +15,13 @@ class ViewEvents (View.View):
 		print('*********************************************')
 		print('*                  Eventos                  *')
 		print('*********************************************')
-		for e in self.events:
-			print(e)
+		if self.events is not None:
+			for e in self.events:
+				print(e)
+		else:
+			print('Nenhum eventos disponível!')
 		print('*********************************************')
+
 
 	def update(self):
 		self.state = self.viewModel.get_state()

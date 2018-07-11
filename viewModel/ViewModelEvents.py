@@ -4,9 +4,10 @@ from hashlib import md5
 
 class ViewModelEvents(ViewModel.ViewModel):
 	def __init__(self, view_events):
-		# self.viewList = []
+		self.viewList = []
 		self.view_events = view_events
 		self.state = None
+		self.events = None
 
 	def get_events(self):
 		self.events = EventDAO.select_all_events()
