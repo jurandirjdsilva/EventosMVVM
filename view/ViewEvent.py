@@ -28,7 +28,7 @@ class ViewEvent (View.View):
                 # chamar editevent na viewModelEvent
                 self.viewModel.editEvent(name, dt_start, dt_end, address)
             else :
-                self.root.show(ViewLogin.ViewLogin(self.root))
+                self.controller.show(ViewLogin.ViewLogin(self.controller))
                 pass
 
         elif option == '0':

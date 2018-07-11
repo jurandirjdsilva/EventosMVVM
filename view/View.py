@@ -17,7 +17,7 @@ class View():
         self.viewModelList.remove(viewModel)
 
     def update(self):
-        self.state = self.viewModel.getState()
+        self.state = self.viewModel.get_state()
 
 
     def show(self):
