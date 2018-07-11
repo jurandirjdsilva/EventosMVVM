@@ -25,3 +25,4 @@ class ViewEvents (View.View):
         pass
 
     def find_period_events(self,dt_start,dt_end):
+        pass
