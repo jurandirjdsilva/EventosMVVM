@@ -4,7 +4,7 @@ from viewModel import ViewModelEvent
 class ViewEvent (View.View):
     def __init__(self, root, id):
         self.id = id
-        self.controller = root
+        self.root = root
         self.viewModelList = []
         self.viewModel = ViewModelEvent.ViewModelEvent(self.id)
         self.viewModel.attach(self)

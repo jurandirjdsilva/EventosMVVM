@@ -4,7 +4,7 @@ from getpass import getpass
 from hashlib import md5 
 class ViewLogin(View.View):
     def __init__(self, root):
-        self.controller = root
+        self.root = root
         self.viewModelList = []
         self.viewModel = ViewModelLogin.ViewModelLogin()
         self.viewModel.attach(self)
