@@ -33,3 +33,6 @@ def select_event(event_name):
 		return event
 	else:
 		print('Evento não encontrado!!!')
+
+def update_event(event):
+	save_event(event)
