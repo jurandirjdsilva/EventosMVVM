@@ -78,8 +78,8 @@ class Event:
 	def get_description(self):
 		return self.__description
 
-	# def __repr__(self):
-	# 	return self.__str__()
+	def __repr__(self):
+		return self.__str__()
 
 	def __str__(self):
 		return self.event_formated()

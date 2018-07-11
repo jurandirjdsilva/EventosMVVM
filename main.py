@@ -8,8 +8,7 @@ class Root:
 
         pass
     def run(self):
-        self.show(ViewEvents.ViewEvents(self)
-                  )
+        self.show(ViewEvents.ViewEvents(self))
         self.show(ViewMain.ViewMain(self))
         pass
     def show (self, view):

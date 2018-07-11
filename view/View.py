@@ -2,9 +2,9 @@ from viewModel import ViewModel
 
 class View():
     state = None
-    def __init__(self, controller ):
+    def __init__(self, root):
 
-        self.root = controller
+        self.root = root
         self.viewModelList = []
         self.viewModel = ViewModel.ViewModel()
         self.viewModel.attach(self)
@@ -17,7 +17,7 @@ class View():
         self.viewModelList.remove(viewModel)
 
     def update(self):
-        self.state = self.viewModel.getState()
+        self.state = self.viewModel.get_state()
 
 
     def show(self):

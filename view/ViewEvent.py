@@ -2,9 +2,9 @@ from view import View
 from view import ViewLogin
 from viewModel import ViewModelEvent
 class ViewEvent (View.View):
-    def __init__(self, controller, id):
+    def __init__(self, root, id):
         self.id = id
-        self.controller = controller
+        self.controller = root
         self.viewModelList = []
         self.viewModel = ViewModelEvent.ViewModelEvent(self.id)
         self.viewModel.attach(self)

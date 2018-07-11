@@ -3,7 +3,7 @@ class ViewModel():
         self.viewList = []
         self.state="teste estado"
         
-    def getState(self):
+    def get_state(self):
         return self.state
     
         
