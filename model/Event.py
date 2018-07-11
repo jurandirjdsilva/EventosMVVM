@@ -4,7 +4,7 @@ from datetime import datetime as dt_DateTime
 from datetime import time as dt_Time
 
 class Event:
-	def __init__(self, name, address, start_date, end_date, start_time, end_time, description):
+	def __init__(self, name, address=None, start_date=None, end_date=None, start_time=None, end_time=None, description=None):
 		self.__name = name
 		self.__address = address
 		self.__start_date = start_date
@@ -78,8 +78,8 @@ class Event:
 	def get_description(self):
 		return self.__description
 
-	def __repr__(self):
-		return self.__str__()
+	# def __repr__(self):
+	# 	return self.__str__()
 
 	def __str__(self):
 		return self.event_formated()
