@@ -13,9 +13,7 @@ class ViewCreateEvent (View.View):
         pass
     def show(self):
 
-        print(self.viewModel.IsLoggedIn)
-
-        if (self.viewModel.IsLoggedIn):
+        if (self.viewModel.IsLoggedIn()):
             # colher dados do evento
             name = input ("nome")
             date_entry = input('data do inicio no formato  AAAA-MM-DD')
@@ -26,7 +24,7 @@ class ViewCreateEvent (View.View):
             dt_end = datetime.date(year, month, day)
             address  = input ("endereço")
             # chamar editevent na viewModelEvent
-            self.viewModel.CreateEvent(name, dt_start, dt_end, address)
+            self.viewModel.CreateEvent(name, dt_start.__str__(), dt_end.__str__(), address)
         else :
             self.controller.show(ViewLogin.ViewLogin(self.controller))
             pass

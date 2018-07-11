@@ -19,5 +19,5 @@ class ViewModel():
         
     def notify(self):
         for view in self.viewList :
-            view.update(self)
+            view.update()
     

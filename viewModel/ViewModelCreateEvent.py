@@ -11,7 +11,7 @@ class ViewModelCreateEvent(ViewModel.ViewModel):
         self.dt_start = dt_start
         self.dt_end = dt_end
         self.address = address
-        self.state = "estado evento " + self.id + self.name + self.dt_start + self.dt_end + self.address
+        self.state = "estado evento " + self.name + self.dt_start + self.dt_end + self.address
 
         # atualiza modelo
 
