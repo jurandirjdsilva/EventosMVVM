@@ -1,6 +1,8 @@
 from view import View
 from view import ViewLogin
 from viewModel import ViewModelCreateEvent
+import datetime
+
 class ViewCreateEvent (View.View):
     def __init__(self, root):
 
@@ -12,6 +14,7 @@ class ViewCreateEvent (View.View):
     def show(self):
 
         print(self.viewModel.IsLoggedIn)
+
         if (self.viewModel.IsLoggedIn):
             # colher dados do evento
             name = input ("nome")

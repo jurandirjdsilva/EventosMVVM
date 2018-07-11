@@ -5,6 +5,7 @@ class ViewEvents (View.View):
 	def __init__(self, root):
 		self.events = None
 		self.root = root
+
 		self.viewModelList = []
 		self.viewModel = ViewModelEvents(self)
 		self.viewModel.attach(self)

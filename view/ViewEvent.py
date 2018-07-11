@@ -28,8 +28,10 @@ class ViewEvent (View.View):
                 # chamar editevent na viewModelEvent
                 self.viewModel.editEvent(name, dt_start, dt_end, address)
             else :
-                self.controller.show(ViewLogin.ViewLogin(self.controller))
+                self.root.show(ViewLogin.ViewLogin(self.root))
                 pass
 
         elif option == '0':
             pass
+
+

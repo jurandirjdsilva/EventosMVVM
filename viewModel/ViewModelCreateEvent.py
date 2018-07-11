@@ -4,7 +4,7 @@ from viewModel import ViewModel
 class ViewModelCreateEvent(ViewModel.ViewModel):
     def __init__(self):
         self.viewList = []
-        self.state = "estado novo evento" + id
+        self.state = "estado novo evento"
 
     def CreateEvent(self, name, dt_start, dt_end, address):
         self.name = name
@@ -19,7 +19,7 @@ class ViewModelCreateEvent(ViewModel.ViewModel):
         pass
 
     def IsLoggedIn(self):
-
+        return True # temporario
         # TODO   buscar no modelo se esta logado
         # FIXME
         if 'loged' in globals():

@@ -3,7 +3,7 @@ from viewModel import ViewModelMain
 from view import ViewEvents
 
 from view import ViewEvent
-#from view import ViewCreateEvent
+from view import ViewCreateEvent
 
 from hashlib import md5
 from getpass import getpass
@@ -46,9 +46,8 @@ class ViewMain(View.View):
 
             pass
         elif option == '3':
-            print("cadastrar eventos")
-            #self.root.show()
-            pass
+            self.root.show(ViewCreateEvent.ViewCreateEvent(self.root))
+
         elif option == '0':
             print ("sair do programa")
             quit(0)
