@@ -43,6 +43,7 @@ def select_by_period(start=None, end=None):
 	return events
 
 
+
 def save_event(event):
 	event_json = json.dumps(event.__dict__)
 	file_name = './model/saved_events/{}.json'.format(event.get_name().upper())

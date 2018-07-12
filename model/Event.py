@@ -5,8 +5,7 @@ from datetime import time as dt_Time
 
 class Event:
     event_count = 0
-    def __init__(self, name, address=None, start_date=None, end_date=None, start_time=None, end_time=None,
-                 description=None):
+    def __init__(self, name, address=None, start_date=None, end_date=None, start_time=None, end_time=None,description=None):
         self.id = self.event_count
         self.event_count += 1
         self.__name = name
@@ -82,24 +81,24 @@ class Event:
     def get_description(self):
         return self.__description
 
-	# def __repr__(self):
-	# 	return self.__str__()
+    # def __repr__(self):
+    # 	return self.__str__()
 
     def __str__(self):
         return self.event_formated()
 
-	def event_formated(self):
-		try:
-			start_date = self.__start_date.strftime('%d/%m/%y %H:%M')
-		except Exception:
-			start_date = 'Null'
+    def event_formated(self):
+        try:
+            start_date = self.__start_date.strftime('%d/%m/%y %H:%M')
+        except Exception:
+            start_date = 'Null'
 
-		try:
-			end_date = self.__end_date.strftime('%d/%m/%y %H:%M')
-		except Exception:
-			end_date = 'Null'
+        try:
+            end_date = self.__end_date.strftime('%d/%m/%y %H:%M')
+        except Exception:
+            end_date = 'Null'
 
-		return '({} - {}) {}: {}'.format(start_date,
-		                                 end_date,
-		                                 self.get_name(),
-		                                 self.get_description())
+        return '({} - {}) {}: {}'.format(start_date,
+                                         end_date,
+                                         self.get_name(),
+                                         self.get_description())

@@ -5,8 +5,8 @@ from view import ViewEvents
 from view import ViewEvent
 from view import ViewCreateEvent
 
-from hashlib import md5
-from getpass import getpass
+from threading import Thread
+
 import datetime
 
 
@@ -39,10 +39,7 @@ class ViewMain(View.View):
             dt_end = datetime.date(year, month, day)
 
 
-            self.root.show(ViewEvents.ViewEvents(self.root,
-                                                 dt_start.__str__(),
-                                                 dt_end.__str__())
-                           )
+            self.root.show(ViewEvents.ViewEvents(self.root))
 
             pass
         elif option == '3':
@@ -51,18 +48,5 @@ class ViewMain(View.View):
         elif option == '0':
             print ("sair do programa")
             quit(0)
-            pass
         self.root.show(self)
 
-
-
-def main():
-    user = input("Usuario:")
-    password = md5(getpass().encode()).hexdigest()
-    print(user)
-    print(password)
-    pass
-
-
-if __name__ == "__main__":
-    main()

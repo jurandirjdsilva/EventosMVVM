@@ -6,7 +6,7 @@ import datetime
 class ViewCreateEvent (View.View):
     def __init__(self, root):
 
-        self.controller = root
+        self.root = root
         self.viewModelList = []
         self.viewModel = ViewModelCreateEvent.ViewModelCreateEvent()
         self.viewModel.attach(self)
@@ -26,5 +26,5 @@ class ViewCreateEvent (View.View):
             # chamar editevent na viewModelEvent
             self.viewModel.CreateEvent(name, dt_start.__str__(), dt_end.__str__(), address)
         else :
-            self.controller.show(ViewLogin.ViewLogin(self.controller))
+            self.root.show(ViewLogin.ViewLogin(self.root))
             pass

@@ -30,7 +30,8 @@ class ViewModelEvents(ViewModel.ViewModel):
 		self.notify()
 
 	def find_period_events(self, dt_start, dt_end):
-		# TODO  busca no modelo
+		self.events = EventDAO.select_by_period(dt_start,dt_end)
+
 		self.notify()
 
 	def update_state(self):
