@@ -25,19 +25,19 @@ class ViewCreateEvent (View.View):
             year, month, day = map(int, date_entry.split('-'))
             dt_end = datetime.date(year, month, day)
 
-	    time_entry = input('Hora de inicio: ')
-	    hour, minute, second, microsecond = (int, date_entry.split(':'))
-	    hr_start = datetime.time(hour, minute, second, microsecond)
+            time_entry = input('Hora de inicio: ')
+            hour, minute, second, microsecond = (int, date_entry.split(':'))
+            hr_start = datetime.time(hour, minute, second, microsecond)
 
             time_entry = input('Hora de término: ')
-	    hour, minute, second, microsecond = (int, date_entry.split(':'))
-	    hr_end = datetime.time(hour, minute, second, microsecond)
+            hour, minute, second, microsecond = (int, date_entry.split(':'))
+            hr_end = datetime.time(hour, minute, second, microsecond)
 
             address  = input ("Local: ")
 
             description = input('Conteúdo do evento: ')
 
-          #  im = Image.open("imagemEvento.jpg")
+            #  im = Image.open("imagemEvento.jpg")
 
             self.viewModel.CreateEvent(name, dt_start._str(), dt_end.str_(), hr_start._str(), hr_end._str(), address, description._str())
         else :
