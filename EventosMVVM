@@ -1,0 +1,3 @@
+#!/bin/bash
+# Starts EventsMVVM
+python3 main.py

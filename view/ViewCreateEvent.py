@@ -11,9 +11,11 @@ class ViewCreateEvent (View.View):
         self.viewModel = ViewModelCreateEvent.ViewModelCreateEvent()
         self.viewModel.attach(self)
         pass
-    def show(self):
 
-        if (self.viewModel.IsLoggedIn()):
+    def show(self):
+        # criei uma funcao de teste para facilitar , so imprime teste
+        self.viewModel.teste()
+        if (True):
             # colher dados do evento
             name = input ("Nome do evento: ")
 
@@ -24,7 +26,11 @@ class ViewCreateEvent (View.View):
             date_entry = input('Data de término (AAAA-MM-DD): ')
             year, month, day = map(int, date_entry.split('-'))
             dt_end = datetime.date(year, month, day)
+            #TODO fix it
+            hr_start ='12:12:12:00'
+            hr_end = '12:12:12:00'
 
+            '''
             time_entry = input('Hora de inicio: ')
             hour, minute, second, microsecond = (int, date_entry.split(':'))
             hr_start = datetime.time(hour, minute, second, microsecond)
@@ -32,14 +38,15 @@ class ViewCreateEvent (View.View):
             time_entry = input('Hora de término: ')
             hour, minute, second, microsecond = (int, date_entry.split(':'))
             hr_end = datetime.time(hour, minute, second, microsecond)
+            '''
 
             address  = input ("Local: ")
 
             description = input('Conteúdo do evento: ')
 
             #  im = Image.open("imagemEvento.jpg")
-
-            self.viewModel.CreateEvent(name, dt_start._str(), dt_end.str_(), hr_start._str(), hr_end._str(), address, description._str())
+            self.viewModel.CreateEvent(name,dt_start,dt_end,address,hr_start,hr_end,description)
+            #self.viewModel.createEvent(name, dt_start, dt_end,address, hr_start, hr_end, description)
         else :
             self.root.show(ViewLogin.ViewLogin(self.root))
 pass
