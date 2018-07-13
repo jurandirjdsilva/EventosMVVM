@@ -14,6 +14,19 @@ def select_all_events():
 			content = nf.read()
 			event = Event(name=None)
 			e = json.loads(content)
+
+			if e['_Event__start_date'] is not None:
+				d_start = e['_Event__start_date']
+				d_start = list(map(int, d_start.split('/')))
+				d_start.reverse()
+				e['_Event__start_date'] = dt_date(*d_start)
+
+			if e['_Event__end_date'] is not None:
+				d_end = e['_Event__end_date']
+				d_end = list(map(int, d_end.split('/')))
+				d_end.reverse()
+				e['_Event__end_date'] = dt_date(*d_start)
+
 			event.__dict__.update(e)
 			events.append(event)
 	return events
@@ -45,6 +58,16 @@ def select_by_period(start=None, end=None):
 
 
 def save_event(event):
+	if event.get_start_date() is not None:
+		event._Event__start_date = '{}/{}/{}'.format(event.get_start_date().day,
+		                                             event.get_start_date().month,
+		                                             event.get_start_date().year)
+
+	if event.get_end_date() is not None:
+		event._Event__end_date = '{}/{}/{}'.format(event.get_end_date().day,
+		                                             event.get_end_date().month,
+		                                             event.get_end_date().year)
+
 	event_json = json.dumps(event.__dict__)
 	file_name = './model/saved_events/{}.json'.format(event.get_name().upper())
 	with open(file_name, 'w') as f:

@@ -43,7 +43,7 @@ class Event:
             raise TypeError('the date_event parameter must be of type date')
 
     def get_start_date(self):
-        return self.__start_date.copy()
+        return self.__start_date
 
     def set_end_date(self, end_date_event):
         if isinstance(end_date_event, dt_Date):
