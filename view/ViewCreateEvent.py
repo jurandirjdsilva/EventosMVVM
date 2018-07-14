@@ -1,16 +1,15 @@
 from view import View
 from view import ViewLogin
-from viewModel import ViewModelCreateEvent
+from viewModel.ViewModelCreateEvent import ViewModelCreateEvent
 import datetime
 
-class ViewCreateEvent (View.View):
-    def _init_(self, root):
+class ViewCreateEvent(View.View):
+    def __init__(self, root):
 
         self.root = root
         self.viewModelList = []
-        self.viewModel = ViewModelCreateEvent.ViewModelCreateEvent()
+        self.viewModel = ViewModelCreateEvent()
         self.viewModel.attach(self)
-        pass
 
     def show(self):
         # criei uma funcao de teste para facilitar , so imprime teste
@@ -45,7 +44,7 @@ class ViewCreateEvent (View.View):
             description = input('Conteúdo do evento: ')
 
             #  im = Image.open("imagemEvento.jpg")
-            self.viewModel.CreateEvent(name,dt_start,dt_end,address,hr_start,hr_end,description)
+            self.viewModel.CreateEvent(name, dt_start, dt_end, address, hr_start, hr_end, description)
             #self.viewModel.createEvent(name, dt_start, dt_end,address, hr_start, hr_end, description)
         else :
             self.root.show(ViewLogin.ViewLogin(self.root))

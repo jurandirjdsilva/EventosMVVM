@@ -1,22 +1,24 @@
 from viewModel import ViewModel
 from model.Event import Event
+from viewModel.ViewModel import ViewModel
 from model.DAO import EventDAO
 
-class ViewModelCreateEvent(ViewModel.ViewModel):
+class ViewModelCreateEvent(ViewModel):
     def __init__(self):
         self.viewList = []
         self.state = "estado novo evento"
 
     def teste(self):
         print("teste")
+
     def CreateEvent(self, name, dt_start, dt_end, address, hr_start=None, hr_end=None, description = None):
 
         event = Event(name,address,dt_start,dt_end,hr_start,hr_end,description)
 
 
-        self.state = "estado evento " + self.name + self.dt_start + self.dt_end + self.address
+        #self.state = "estado evento " + name + dt_start + dt_end + address
         print(event)
-        #EventDAO.save_event(event)
+        EventDAO.save_event(event)
         # atualiza modelo
 
         self.notify()
