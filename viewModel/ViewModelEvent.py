@@ -18,6 +18,22 @@ class ViewModelEvent(ViewModel.ViewModel):
         # atualiza modelo
         self.notify()
         pass
+
+    def editEvent(self, name, dt_start, dt_end, address, hr_start=None, hr_end=None, description = None):
+        event = Event(name,address,dt_start,dt_end,hr_start,hr_end,description)
+        print(event)
+
+        #TODO
+        #EventDAO.remove_event(event)
+        EventDAO.save_event(event)
+
+        self.event = event
+        self.notify()
+
+
+
+
+
     def IsLoggedIn(self):
         #busca no modelo se esta logado
         if 'loged' in globals():

@@ -15,7 +15,6 @@ class ViewModelCreateEvent(ViewModel):
 
         event = Event(name,address,dt_start,dt_end,hr_start,hr_end,description)
 
-
         print(event)
         EventDAO.save_event(event)
         # atualiza modelo
