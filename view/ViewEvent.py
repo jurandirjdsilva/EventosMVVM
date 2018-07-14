@@ -16,16 +16,17 @@ class ViewEvent (View.View):
     def update(self):
         self.state = self.viewModel.get_state()
         self.event = self.viewModel.event
+        self.show()
 
     def show(self):
         if self.event is not None :
             print(self.event)
             print('*********************************************')
-            print('*                  {}                  *'.format(self.event.get_name()))
+            print('*                  {}                  '.format(self.event.get_name()))
             print('*********************************************')
-            print('*local : {}                  *'.format(self.event.get_address()))
-            print('*de {} ate {}                 *'.format(self.event.get_start_date(), self.event.get_end_date()))
-            print('*{}                  *'.format(self.event.get_description()))
+            print('*local : {}                  '.format(self.event.get_address()))
+            print('*de {} ate {}                 '.format(self.event.get_start_date(), self.event.get_end_date()))
+            print('*{} '.format(self.event.get_description()))
 
             option = input("0 para retornar , 1 para editar o evento ")
             if option == '1':

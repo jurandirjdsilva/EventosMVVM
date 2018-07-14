@@ -18,8 +18,7 @@ class View():
 
     def update(self):
         self.state = self.viewModel.get_state()
-
+        self.show()
 
     def show(self):
-
         print(self.state)
