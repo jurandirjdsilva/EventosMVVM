@@ -2,8 +2,7 @@ class ViewModel():
     viewList = []
     state = None
     def __init__(self):
-
-        self.state="teste estado"
+        self.state="estado definido pela viestado"
         
     def get_state(self):
         return self.state

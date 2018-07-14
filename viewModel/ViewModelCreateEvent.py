@@ -5,9 +5,9 @@ from model.DAO import EventDAO
 
 class ViewModelCreateEvent(ViewModel):
     def __init__(self):
-        self.viewList = []
         self.state = "estado novo evento"
 
+    @property
     def teste(self):
         print("teste")
 
@@ -16,7 +16,6 @@ class ViewModelCreateEvent(ViewModel):
         event = Event(name,address,dt_start,dt_end,hr_start,hr_end,description)
 
 
-        #self.state = "estado evento " + name + dt_start + dt_end + address
         print(event)
         EventDAO.save_event(event)
         # atualiza modelo
@@ -24,6 +23,7 @@ class ViewModelCreateEvent(ViewModel):
         self.notify()
         pass
 
+    @property
     def IsLoggedIn(self):
         return True # temporario
         # TODO   buscar no modelo se esta logado

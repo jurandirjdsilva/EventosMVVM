@@ -30,7 +30,8 @@ class Event:
             raise TypeError('the address parameter must be of type Address')
 
     def get_address(self):
-        return self.__address.address_formated()
+        return self.__address
+        #return self.__address.address_formated()
 
     def get_address_type_address(self):
         return self.__address.copy()

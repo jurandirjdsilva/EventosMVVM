@@ -1,11 +1,14 @@
 from viewModel import ViewModel
-
+from model.Event import Event
+from model.DAO import EventDAO
 
 class ViewModelEvent(ViewModel.ViewModel):
-    def __init__(self, id):
+    def __init__(self, name):
         self.viewList = []
-        self.id = id
-        self.state = "estado evento " + id
+        self.event= EventDAO.select_event(name)
+        self.state = self.event
+
+
     def editEvent (self,name,dt_start,dt_end,address):
         self.name = name
         self.dt_start = dt_start

@@ -33,7 +33,7 @@ def select_all_events():
 
 
 def select_event(event_name):
-	if event_name in os.listdir('./model/saved_events/'):
+	if event_name+".json" in os.listdir('./model/saved_events/'):
 		file_name = './model/saved_events/{}.json'.format(event_name)
 		with open(file_name, 'r') as f:
 			content = f.read()

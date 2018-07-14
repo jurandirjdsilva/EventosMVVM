@@ -25,9 +25,9 @@ class ViewMain(View.View):
             "0 para sair , 1 para exibir um evento especifico, 2 para mostrar os eventos de um periodo e 3 para cadastrar eventos")
         if option == '1':
             print ("para exibir um evento especifico")
-            id = input("digite a id do evento")
+            nome = input("digite o nome do evento")
 
-            self.root.show(ViewEvent.ViewEvent(self.root, id))
+            self.root.show(ViewEvent.ViewEvent(self.root, nome))
             pass
         elif option == '2':
             print("para mostrar os eventos de um periodo ")

@@ -2,13 +2,13 @@ from viewModel import ViewModel
 
 class View():
     state = None
+    viewModel = None
+    viewModelList = []
     def __init__(self, root):
 
         self.root = root
-        self.viewModelList = []
         self.viewModel = ViewModel.ViewModel()
         self.viewModel.attach(self)
-        pass
 
 
     def attach(self,viewModel):
@@ -23,4 +23,3 @@ class View():
     def show(self):
 
         print(self.state)
-        pass
